@@ -4,7 +4,7 @@ from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 
 # Set the path to the credentials file
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'Path\to\your\credential\json\file'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'Path\to\your\credential\json\file' # <-- edit here
 
 # Get the credentials
 creds, project_id = google.auth.default(scopes=['https://www.googleapis.com/auth/youtube.force-ssl'])
@@ -13,7 +13,7 @@ creds, project_id = google.auth.default(scopes=['https://www.googleapis.com/auth
 youtube = build('youtube', 'v3', credentials=creds)
 
 # Set the ID of the playlist you want to extract
-playlist_id = 'your youtube playlist ID'
+playlist_id = 'your youtube playlist ID'  # <-- edit here
 
 # Get the first page of the playlist items
 request = youtube.playlistItems().list(
